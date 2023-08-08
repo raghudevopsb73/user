@@ -9,6 +9,8 @@ serviceAccount:
   annotations:
     eks.amazonaws.com/role-arn: arn:aws:iam::739561048503:role/eks-prod-ssm-pm-role
 
-PARAMETERS: "DOCUMENTDB,roboshop.prod.user.mongo REDIS_HOST,roboshop.prod.user.redis_host MONGO_URL,roboshop.prod.user.mongo_url"
+PARAMETERS: "DOCUMENTDB,roboshop.prod.user.mongo REDIS_HOST,roboshop.prod.user.redis_host MONGO_URL,roboshop.prod.user.mongo_url DOCDB_ENDPOINT,roboshop.prod.user.docdb_endpoint DOCDB_USERNAME,roboshop.prod.docdb.username DOCDB_PASSWORD,roboshop.prod.docdb.password COMPONENT,user SCHEMA_TYPE,mongo"
 
 
+schemaInitContainer:
+  enabled: true
